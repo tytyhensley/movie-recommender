@@ -5,7 +5,7 @@ This is a Reactjs API data fetching project built from  scratch. The movei recom
 
 This project was done to to utitlize my skills of React API request, and get comfotable using React Hooks such as useState.
 
-The app was deployed on a public domain: https://advice-quote-generator.netlify.app/
+The app was deployed on a public domain: https://cinerecs.netlify.app/
 
 ### `npm start`
 
