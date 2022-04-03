@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+#root, html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.app{
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./images/movie_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.logo{
+    position: absolute;
+    top: 2%;
+    width: 55%;
+}
+.genre_select{
+    color: black;
+    font-size: 18px;
+    font-family: 'Inconsolata', monospace;
+    background-color: whitesmoke;
+    border: 0;
+    border-radius: 5px;
+    height: 6%;
+    width: 60%;
+    padding: 5px;
+    resize: none;
+    text-align: left;
+    position: relative;
+    top: 30%;
+    
+}
+.movies{
+    width: 60%;
+    height: 55%;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+}
+.next_pg{
+    position: absolute;
+    top: 85%;
+    right: 10%;
+    cursor: pointer;
+}
+.next_pg:hover {
+    transform: scale(1.05);
+}
+.prev_pg{
+    position: absolute;
+    top: 85%;
+    right: 15%;
+    cursor: pointer;
+}
+.prev_pg:hover {
+    transform: scale(1.05);
+}
+  
+
+.no_movies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 30%;
+    height: 20%;
+    width: 40%;
+}
+.no_movies > img {
+    height: 200%;
+}
+.no_movies > h1 {
+    color: whitesmoke;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie_grid {
+    padding: 5px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Inconsolata', monospace;
+}
+.movie_grid > div {
+    flex-basis: calc(18%);
+    padding: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie_card{
+    text-align: center;
+    align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.movie_card > img{
+    width: 180px;
+    height: 230px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.movie_card > h1 {
+    color: whitesmoke;
+    font-family: 'Inconsolata', monospace;   
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    
+.popup > img {
+    border-radius: 5px;
+    width: 30%;
+    object-fit: cover;
+    position: absolute;
+    left: 5%;
+}
+.popup > div {
+    position: absolute;
+    right: 5%;
+    width: 50%;
+    color: whitesmoke;
+    font-family: 'Inconsolata', monospace;
+    text-align: justify;
 }
